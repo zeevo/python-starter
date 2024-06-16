@@ -10,6 +10,9 @@ install:
 install-dev: install
 	python -m pip install -e ".[dev]"
 
+build:
+	python -m build
+
 ## Delete all temporary files
 clean:
 	rm -rf .ipynb_checkpoints

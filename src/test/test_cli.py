@@ -1,6 +1,6 @@
 from click.testing import CliRunner
 
-from src.cli import cli
+from python_starter.cli import cli
 
 
 def test_example():
