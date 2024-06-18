@@ -13,36 +13,14 @@ classifiers = []
 dependencies = ["click==8.1.7"]
 
 [project.scripts]
-starter = "python_starter.cli:cli"
+python_starter = "python_starter.cli:cli"
 
 [project.urls]
-Homepage = "https://github.com/pypa/sampleproject"
-Issues = "https://github.com/pypa/sampleproject/issues"
+Homepage = "https://github.com/zeevo/python-starter"
+Issues = "https://github.com/zeevo/python-starter/issues"
 
 [project.optional-dependencies]
-dev = ["black>=22.10.0", "pytest>=7.2.0", "pytest-cov>=4.0.0", "ruff>=0.0.219"]
+dev = ["build>=1.2.1", "pytest>=8.2.2", "pytest-cov>=5.0.0", "ruff>=0.4.9"]
 
 [tool.ruff]
-exclude = [".env", ".venv", "venv", "notebooks"]
-select = ["E", "F", "I", "W"]
-
-[tool.coverage.paths]
-source = ["src"]
-
-[tool.coverage.run]
-branch = true
-relative_files = true
-
-[tool.coverage.report]
-show_missing = true
-fail_under = 80
-
-[tool.black]
-extend-exclude = '''
-/(
-  | .env
-  | .venv
-  | venv
-  | notebooks
-)/
-'''
+exclude = ["src/python_starter/__init__.py"]
