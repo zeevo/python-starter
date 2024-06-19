@@ -1,17 +1,14 @@
 .PHONY: install install-dev clean lint format test test-cov check check-fix
 
-## Install for production
 install:
 	python -m pip install -e .
 
-## Install for development 
 install-dev: install
 	python -m pip install -e ".[dev]"
 
 build:
 	python -m build
 
-## Delete all temporary files
 clean:
 	rm -rf .ipynb_checkpoints
 	rm -rf **/.ipynb_checkpoints
