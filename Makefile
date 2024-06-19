@@ -22,20 +22,20 @@ clean:
 	rm -rf build
 	rm -rf dist
 
-## Lint using ruff
-lint:
-	python -m ruff .
-
-## Format files using black
 format:
 	python -m ruff format .
 
-## Run tests
+lint:
+	python -m ruff check .
+
+lint-fix:
+	python -m ruff check . --fix
+
+typecheck:
+	python -m mypy .
+
 test:
 	python -m pytest
 
 test-cov:
 	python -m pytest --cov=src --cov-report xml --log-level=WARNING --disable-pytest-warnings
-
-lint-fix:
-	python -m ruff check . --fix
